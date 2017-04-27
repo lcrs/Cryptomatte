@@ -13,17 +13,9 @@
       <Uniform Index="5" NoInput="Error" Tooltip="" DisplayName="uCrypto02a" InputColor="99, 0, 44" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="uCrypto02a">
       </Uniform>
 
-      <Uniform Inc="0.01" Tooltip="" Row="1" Col="0" Page="0" Action3DWidget="False" IconType="None" ValueType="Colour" Type="vec3" ChannelName="id1" DisplayName="id1" Name="id1">
-         <SubUniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="0.0">
-         </SubUniform>
-         <SubUniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="0.0">
-         </SubUniform>
-         <SubUniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="0.0">
-         </SubUniform>
+      <Uniform ResDependent="None" Max="340282200000000001370767539707807006720.0" Min="-340282200000000001370767539707807006720.0" Default="0.0" Inc="0.01" Tooltip="For now, sample the red channel of the uCrypto00rgb layer in another app, and type the number in here.  This can be awkward because most apps including Nuke will round the sampled value slightly, or display it in scientific notation like 3.2e+23 :(" Row="0" Col="0" Page="0" Type="float" ChannelName="id" DisplayName="id" Name="id">
       </Uniform>
 
-      <Uniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="0.0" Inc="0.01" Tooltip="" Row="0" Col="0" Page="0" Type="float" ChannelName="tolerance" DisplayName="tolerance" Name="tolerance">
-      </Uniform>
    </Shader>
    <Page Name="" Page="0">
       <Col Name="" Col="0" Page="0">
