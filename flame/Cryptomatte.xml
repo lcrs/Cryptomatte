@@ -46,7 +46,7 @@ lewis@lewissaunders.com
          </SubUniform>
          <SubUniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="0.0">
          </SubUniform>
-         <SubUniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="0.0">
+         <SubUniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="0.001">
          </SubUniform>
       </Uniform>
       <Uniform Inc="0.01" Tooltip="" Row="0" Col="1" Page="0" Action3DWidget="False" IconType="None" ValueType="Colour" Type="vec3" ChannelName="ID_R" DisplayName="ID for R" Name="pickr" UIConditionSource="separatergb" UIConditionValue="True" UIConditionType="hide">
