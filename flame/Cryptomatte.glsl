@@ -80,32 +80,11 @@ void main() {
   if(result.rg != vec2(0.0)) result.rg = mix(result.rg, vec2(0.3), 0.5);
   result = mix(result, result * rank0.y, 0.5);
 
-  // Secrete the rank0 ID in the blue channel, but always negative
-  // To mark that we've negated it, we round the red/green channels
-  // to the closest 1/256th then add a 512th.  To mark that we haven't
-  // negated it, we just round to 1/256th.  This is kinda like hiding
-  // 1 bit of info in the 9th bit of the mantissa or so
-  if(rank0.x < 0.0) {
-    result.rg *= 256.0;
-    result.rg = floor(result.rg);
-    result.rg /= 256.0;
-    result.b = rank0.x;
-  } else {
-    result.rg *= 256.0;
-    result.rg = floor(result.rg);
-    result.rg += vec2(0.5);
-    result.rg /= 256.0;
-    result.b = -rank0.x;
-  }
+  // Blue channel is our rank0 ID, to allow picking
+  result.b = rank0.x;
 
-  // Now we can take our picked blue channel, and check whether we need
-  // to invert it to recover the original ID - the red channel will be not
-  // be rounded to 1/256th if so
+  // Recover the alpha for the picked ID
   float pick = pickresult.b;
-  if(fract(pickresult.r * 256.0) > 0.0) {
-    pick = -pick;
-  }
-  // Recover the alpha for this ID as per normal
   if(rank0.x == pick) result.a += rank0.y;
   if(rank1.x == pick) result.a += rank1.y;
   if(rank2.x == pick) result.a += rank2.y;
